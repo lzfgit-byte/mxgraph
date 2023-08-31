@@ -2,9 +2,9 @@ import { ref } from 'vue';
 import type { mxCell as TypeMxCell } from 'mxgraph';
 import { nanoid } from 'nanoid';
 import mx from './useGraphFactory';
-import type { cShapeType } from '@/components/mxGraph/src/hook/useGraphSideBarSvg';
-import useGraphSideBarSvg from '@/components/mxGraph/src/hook/useGraphSideBarSvg';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
+import type { cShapeType } from '@/hook/useGraphSideBarSvg';
+import useGraphSideBarSvg from '@/hook/useGraphSideBarSvg';
+import type MyGraph from '@/hook/useGraphGraph';
 const { mxUtils, mxCell, mxGeometry, mxPoint, mxConstants } = mx;
 
 const baseSvg = ref<cShapeType[]>();

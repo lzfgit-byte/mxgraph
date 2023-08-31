@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import { baseEdgeSvg, baseSvgInfo } from '@/components/mxGraph/src/const/svgConst';
-import type { ItemType } from '@/components/mxGraph/src/type/graphTyped';
+import type MyGraph from '@/hook/useGraphGraph';
+import mx from '@/hook/useGraphFactory';
+import { baseEdgeSvg, baseSvgInfo } from '@/const/svgConst';
+import type { ItemType } from '@/type/graphTyped';
 const { mxClient, mxCell, mxGeometry, mxConstants, mxPoint } = mx;
 export interface cShapeType {
   key?: string;

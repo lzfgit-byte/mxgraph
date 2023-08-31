@@ -1,16 +1,16 @@
 import type { Ref } from 'vue';
 import { onMounted, shallowRef } from 'vue';
 import type { mxEditor } from 'mxgraph';
-import type { PowerGraphProps } from '@/components/mxGraph/src/type/graphTyped';
-import MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import useGraphHandler from '@/components/mxGraph/src/hook/useGraphHandler';
-import useGraphContentMenu from '@/components/mxGraph/src/hook/useGraphContentMenu';
-import type { GraphEmitsType } from '@/components/mxGraph/src/const/emits';
-import useGraphCellToolTip from '@/components/mxGraph/src/hook/useGraphCellToolTip';
-import useGraphCellOverlay from '@/components/mxGraph/src/hook/useGraphCellOverlay';
-import type { GraphSetState } from '@/components/mxGraph/src/hook/useGraphState';
-import useGraphState from '@/components/mxGraph/src/hook/useGraphState';
+import type { PowerGraphProps } from '@/type/graphTyped';
+import MyGraph from '@/hook/useGraphGraph';
+import mx from '@/hook/useGraphFactory';
+import useGraphHandler from '@/hook/useGraphHandler';
+import useGraphContentMenu from '@/hook/useGraphContentMenu';
+import type { GraphEmitsType } from '@/const/emits';
+import useGraphCellToolTip from '@/hook/useGraphCellToolTip';
+import useGraphCellOverlay from '@/hook/useGraphCellOverlay';
+import type { GraphSetState } from '@/hook/useGraphState';
+import useGraphState from '@/hook/useGraphState';
 import { bus } from '@/utils/bus';
 
 export interface GraphSetReturnType {

@@ -14,7 +14,7 @@
 </template>
 <script setup lang="ts">
   import { ElTooltip } from 'element-plus';
-  import GraphSvgIcon from '@/components/mxGraph/src/components/GraphSvgIcon.vue';
+  import GraphSvgIcon from '@/components/GraphSvgIcon.vue';
   defineProps({
     content: String,
     showJump: Boolean,

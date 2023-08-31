@@ -5,9 +5,9 @@ import type {
   PowerGraphMethods,
   PowerGraphOpts,
   PowerGraphProps,
-} from '@/components/mxGraph/src/type/graphTyped';
-import usePowerGraphProp from '@/components/mxGraph/src/hook/usePowerGraphProp';
-import usePowerGraphMethod from '@/components/mxGraph/src/hook/usePowerGraphMethod';
+} from '@/type/graphTyped';
+import usePowerGraphProp from '@/hook/usePowerGraphProp';
+import usePowerGraphMethod from '@/hook/usePowerGraphMethod';
 
 export default (
   opts: PowerGraphOpts

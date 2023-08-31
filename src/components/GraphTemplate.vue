@@ -10,7 +10,7 @@
 </template>
 <script setup lang="ts">
   import { inject } from 'vue';
-  import { graphTemplate } from '@/components/mxGraph/src/const/defaultTemplete';
+  import { graphTemplate } from '@/const/defaultTemplete';
 
   const setXml = inject('setXml');
 </script>

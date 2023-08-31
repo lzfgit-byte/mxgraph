@@ -1,7 +1,7 @@
 import type { mxCell } from 'mxgraph';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import { imageFlow } from '@/components/mxGraph/src/const/images';
+import type MyGraph from '@/hook/useGraphGraph';
+import mx from '@/hook/useGraphFactory';
+import { imageFlow } from '@/const/images';
 const { mxEvent, mxConstants, mxCellOverlay, mxImage, mxPoint } = mx;
 
 const setOverlay = (graph: MyGraph) => {

@@ -1,6 +1,6 @@
 import type { mxSvgCanvas2D } from 'mxgraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import { flowImageType, imageFlow } from '@/components/mxGraph/src/const/images';
+import mx from '@/hook/useGraphFactory';
+import { flowImageType, imageFlow } from '@/const/images';
 const { mxActor, mxUtils, mxCellRenderer, mxConnectionConstraint, mxPoint, mxTriangle } = mx;
 
 export function CustomSwimlineShape() {

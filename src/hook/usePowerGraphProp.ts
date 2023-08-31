@@ -1,5 +1,5 @@
 import { reactive } from 'vue';
-import type { PowerGraphOpts, PowerGraphProps } from '@/components/mxGraph/src/type/graphTyped';
+import type { PowerGraphOpts, PowerGraphProps } from '@/type/graphTyped';
 
 export default (opts: PowerGraphOpts): PowerGraphProps => {
   const {

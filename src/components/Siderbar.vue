@@ -37,8 +37,8 @@
   import type { PropType } from 'vue';
   import { onMounted, ref } from 'vue';
   import { ElCollapse, ElCollapseItem } from 'element-plus';
-  import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-  import useGraphDrag from '@/components/mxGraph/src/hook/useGraphDrag';
+  import type MyGraph from '@/hook/useGraphGraph';
+  import useGraphDrag from '@/hook/useGraphDrag';
   const props = defineProps({ graph: Object as PropType<MyGraph> });
   const emits = defineEmits(['sideLoaded']);
   const { baseSvg, handlerClick, baseEdgeSvg, initDrag } = useGraphDrag(props as any);

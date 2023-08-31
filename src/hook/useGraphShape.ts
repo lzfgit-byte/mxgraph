@@ -1,11 +1,11 @@
-import { isFunction } from '@v-c/utils';
 import type { mxRectangle } from 'mxgraph';
 
 import mx from '../hook/useGraphFactory';
-import MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import allShape from '@/components/mxGraph/src/const/shapes';
-import { CustomShimShape, CustomSwimlineShape } from '@/components/mxGraph/src/const/customeShape';
-import useGraphCustomStyle from '@/components/mxGraph/src/hook/useGraphCustomStyle';
+import MyGraph from '@/hook/useGraphGraph';
+import allShape from '@/const/shapes';
+import { CustomShimShape, CustomSwimlineShape } from '@/const/customeShape';
+import useGraphCustomStyle from '@/hook/useGraphCustomStyle';
+import {isFunction} from "lodash";
 const {
   SingleArrowShape,
   UmlLifeline,

@@ -64,16 +64,16 @@
   import type { PropType } from 'vue';
   import { ElTabPane, ElTabs } from 'element-plus';
   import { ref } from 'vue';
-  import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-  import useGraphFont from '@/components/mxGraph/src/hook/useGraphFont';
-  import FormVertexSetForm from '@/components/mxGraph/src/components/FormVertexSetForm.vue';
-  import FormVertextFontSetForm from '@/components/mxGraph/src/components/FormVertextFontSetForm.vue';
-  import FormEdgeSetForm from '@/components/mxGraph/src/components/FormEdgeSetForm.vue';
-  import GraphTemplate from '@/components/mxGraph/src/components/GraphTemplate.vue';
-  import FormItemNodeConfig from '@/components/mxGraph/src/components/FormItemNodeConfig.vue';
-  import FormItemLayout from '@/components/mxGraph/src/components/FormItemLayout.vue';
-  import FormItemLineLayout from '@/components/mxGraph/src/components/FormItemLineLayout.vue';
-  import GraphShortCuts from '@/components/mxGraph/src/components/GraphShortCuts.vue';
+  import type MyGraph from '@/hook/useGraphGraph';
+  import useGraphFont from '@/hook/useGraphFont';
+  import FormVertexSetForm from '@/components/FormVertexSetForm.vue';
+  import FormVertextFontSetForm from '@/components/FormVertextFontSetForm.vue';
+  import FormEdgeSetForm from '@/components/FormEdgeSetForm.vue';
+  import GraphTemplate from '@/components/GraphTemplate.vue';
+  import FormItemNodeConfig from '@/components/FormItemNodeConfig.vue';
+  import FormItemLayout from '@/components/FormItemLayout.vue';
+  import FormItemLineLayout from '@/components/FormItemLineLayout.vue';
+  import GraphShortCuts from '@/components/GraphShortCuts.vue';
   const props = defineProps({ graph: Object as PropType<MyGraph> });
   const {
     handlePropChange,

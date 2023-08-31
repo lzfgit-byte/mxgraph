@@ -6,7 +6,7 @@
 </template>
 <script setup lang="ts">
   import { watchEffect } from 'vue';
-  import { graphShortsMap } from '@/components/mxGraph/src/hook/useGraphShortcutKey';
+  import { graphShortsMap } from '@/hook/useGraphShortcutKey';
   watchEffect(() => {
     console.log(graphShortsMap.value);
   });

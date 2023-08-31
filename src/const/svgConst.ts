@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
 import mx from '../hook/useGraphFactory';
-import type { cShapeType } from '@/components/mxGraph/src/hook/useGraphSideBarSvg';
-import { flowImageType } from '@/components/mxGraph/src/const/images';
-import type { bpmnNodeChildType } from '@/components/mxGraph/src/utils/Transform';
+import type { cShapeType } from '@/hook/useGraphSideBarSvg';
+import { flowImageType } from '@/const/images';
+import type { bpmnNodeChildType } from '@/utils/Transform';
 const { mxGeometry, mxCell, mxConstants } = mx;
 export interface baseSvgType extends cShapeType {}
 export const baseSvgInfo: baseSvgType[] = [

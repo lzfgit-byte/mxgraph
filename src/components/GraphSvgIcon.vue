@@ -38,7 +38,7 @@
 </template>
 <script setup lang="ts">
   import type { PropType } from 'vue';
-  import type { GraphIconTypes } from '@/components/mxGraph/src/type/graphTyped';
+  import type { GraphIconTypes } from '@/type/graphTyped';
 
   defineProps({ width: Number, height: Number, type: String as PropType<GraphIconTypes> });
 </script>

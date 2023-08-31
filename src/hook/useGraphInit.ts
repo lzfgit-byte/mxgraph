@@ -1,8 +1,8 @@
 import { forIn } from 'lodash';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import useGraphShape from '@/components/mxGraph/src/hook/useGraphShape';
-import useGraphStencil from '@/components/mxGraph/src/hook/useGraphStencil';
-import useGraphPolyfill from '@/components/mxGraph/src/hook/useGraphPolyfill';
+import mx from '@/hook/useGraphFactory';
+import useGraphShape from '@/hook/useGraphShape';
+import useGraphStencil from '@/hook/useGraphStencil';
+import useGraphPolyfill from '@/hook/useGraphPolyfill';
 useGraphStencil();
 useGraphPolyfill();
 const {

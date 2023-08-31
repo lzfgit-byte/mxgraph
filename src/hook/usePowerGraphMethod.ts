@@ -4,7 +4,7 @@ import type {
   PowerGraphMethods,
   PowerGraphOpts,
   PowerGraphProps,
-} from '@/components/mxGraph/src/type/graphTyped';
+} from '@/type/graphTyped';
 
 export default (
   opts: PowerGraphOpts,

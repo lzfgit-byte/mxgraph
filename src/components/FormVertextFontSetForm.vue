@@ -76,9 +76,9 @@
     fonts,
     labelPosition,
     verticalLabelPosition,
-  } from '@/components/mxGraph/src/const/FormatSettingPanel';
-  import type { TextConfig } from '@/components/mxGraph/src/hook/useGraphFont';
-  import FormDefaultColor from '@/components/mxGraph/src/components/FormDefaultColor.vue';
+  } from '@/const/FormatSettingPanel';
+  import type { TextConfig } from '@/hook/useGraphFont';
+  import FormDefaultColor from '@/components/FormDefaultColor.vue';
   const props = defineProps({
     textModel: Object as PropType<TextConfig>,
     handlePropChange: Function,

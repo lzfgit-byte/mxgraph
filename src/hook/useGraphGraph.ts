@@ -5,11 +5,11 @@ import { Base64 } from 'js-base64';
 import mx from './useGraphFactory';
 import { Action } from './useGraphAction';
 import myStyle from './useGraphDefaultStyle';
-import type { NodeConfig } from '@/components/mxGraph/src/type/graphTyped';
+import type { NodeConfig } from '@/type/graphTyped';
 // import { ctrlKey, keyCode } from './useGraphDefaultConfig';
 // @ts-expect-error
-import handlerImag from '@/components/mxGraph/src/images/handle-main.png?url';
-import type { GraphEmitsType } from '@/components/mxGraph/src/const/emits';
+import handlerImag from '@/images/handle-main.png?url';
+import type { GraphEmitsType } from '@/const/emits';
 const {
   mxGraph,
   mxRubberband,

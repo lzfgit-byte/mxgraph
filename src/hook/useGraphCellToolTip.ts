@@ -1,8 +1,8 @@
 import type { mxCell } from 'mxgraph';
 import { h, render } from 'vue';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import GraphTool from '@/components/mxGraph/src/components/GraphTool.vue';
+import type MyGraph from '@/hook/useGraphGraph';
+import mx from '@/hook/useGraphFactory';
+import GraphTool from '@/components/GraphTool.vue';
 const { mxEvent, mxConstants, mxEventObject } = mx;
 
 const clearCellTools = (classId) => {

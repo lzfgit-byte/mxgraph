@@ -1,9 +1,9 @@
 import { reactive, ref, shallowRef, watch } from 'vue';
 import type { mxCell } from 'mxgraph';
 import { forIn, isNumber } from 'lodash';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import { fontStyle } from '@/components/mxGraph/src/const/FormatSettingPanel';
+import type MyGraph from '@/hook/useGraphGraph';
+import mx from '@/hook/useGraphFactory';
+import { fontStyle } from '@/const/FormatSettingPanel';
 export interface positionModelType {
   id: string;
   width: number;

@@ -1,4 +1,4 @@
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
+import mx from '@/hook/useGraphFactory';
 const { mxUtils, mxPoint, mxStyleRegistry, mxElbowEdgeHandler, mxEdgeStyle } = mx;
 let isoHVector = new mxPoint(1, 0);
 let isoVVector = new mxPoint(1, 0);

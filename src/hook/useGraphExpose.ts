@@ -1,16 +1,16 @@
 import type { Ref } from 'vue';
 import type { mxCell, mxEditor, mxPoint } from 'mxgraph';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import type { PowerGraphExpose, PowerGraphProps } from '@/components/mxGraph/src/type/graphTyped';
-import { buildStyleStr } from '@/components/mxGraph/src/utils/kitUtil';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import type { GraphSetState } from '@/components/mxGraph/src/hook/useGraphState';
+import type MyGraph from '@/hook/useGraphGraph';
+import type { PowerGraphExpose, PowerGraphProps } from '@/type/graphTyped';
+import { buildStyleStr } from '@/utils/kitUtil';
+import mx from '@/hook/useGraphFactory';
+import type { GraphSetState } from '@/hook/useGraphState';
 import {
   bpmnXmlToJson,
   setGraphFromJson,
   transform2Json,
   writeBpmnXml,
-} from '@/components/mxGraph/src/utils/Transform';
+} from '@/utils/Transform';
 const { mxEvent, mxUtils, mxEventObject, mxHierarchicalLayout, mxConstants } = mx;
 
 export default (

@@ -54,8 +54,8 @@
 <script setup lang="ts">
   import { ElColorPicker, ElForm, ElFormItem, ElInputNumber } from 'element-plus';
   import type { PropType } from 'vue';
-  import type { positionModelType } from '@/components/mxGraph/src/hook/useGraphFont';
-  import FormDefaultColor from '@/components/mxGraph/src/components/FormDefaultColor.vue';
+  import type { positionModelType } from '@/hook/useGraphFont';
+  import FormDefaultColor from '@/components/FormDefaultColor.vue';
   defineProps({
     positionModel: Object as PropType<positionModelType>,
     handleGeomertyChange: Function,

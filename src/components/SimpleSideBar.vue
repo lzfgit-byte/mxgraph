@@ -36,9 +36,9 @@
   import type { PropType } from 'vue';
   import { onMounted, ref } from 'vue';
   import { ElCollapse, ElCollapseItem } from 'element-plus';
-  import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-  import useGraphMultiSvg from '@/components/mxGraph/src/hook/useGraphMultiSvg';
-  import type { PanelsType } from '@/components';
+  import type MyGraph from '@/hook/useGraphGraph';
+  import useGraphMultiSvg from '@/hook/useGraphMultiSvg';
+  import type { PanelsType } from '@/type/graphTyped';
 
   const props = defineProps({
     graph: Object as PropType<MyGraph>,

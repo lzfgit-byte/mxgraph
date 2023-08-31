@@ -4,9 +4,9 @@ import { debounce } from 'lodash';
 import { nanoid } from 'nanoid';
 import { onUnmounted } from 'vue';
 import type MyGraph from './useGraphGraph';
-import type { PowerGraphExpose, PowerGraphProps } from '@/components';
-import type { GraphSetState } from '@/components/mxGraph/src/hook/useGraphState';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
+import type { PowerGraphExpose, PowerGraphProps } from '@/type/graphTyped';
+import type { GraphSetState } from '@/hook/useGraphState';
+import mx from '@/hook/useGraphFactory';
 import { bus } from '@/utils/bus';
 const { mxConstants, mxEvent } = mx;
 

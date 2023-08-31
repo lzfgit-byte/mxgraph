@@ -1,5 +1,5 @@
 import mx from '../hook/useGraphFactory';
-import MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
+import MyGraph from '@/hook/useGraphGraph';
 const { mxVertexHandler, mxClient } = mx;
 function CustommxVertexToolHandler(state) {
   mxVertexHandler.apply(this, arguments);

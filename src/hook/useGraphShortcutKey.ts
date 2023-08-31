@@ -2,8 +2,8 @@ import { useMagicKeys } from '@vueuse/core';
 import type { Ref } from 'vue';
 import { onMounted, ref, watchEffect } from 'vue';
 import mx from './useGraphFactory';
-import type { MyGraph } from '@/components/mxGraph/src/hook/useGraphGraph';
-import type { PowerGraphExpose } from '@/components';
+import type { MyGraph } from '@/hook/useGraphGraph';
+import type { PowerGraphExpose } from '@/type/graphTyped';
 const { mxClipboard } = mx;
 export interface GraphShortsMapType {
   name: string;

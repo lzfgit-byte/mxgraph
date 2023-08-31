@@ -1,5 +1,5 @@
 import type { mxCell, mxPoint } from 'mxgraph';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
+import type MyGraph from '@/hook/useGraphGraph';
 export * from 'mxgraph';
 export type ItemType = 'vertex' | 'edge' | 'function';
 // icon

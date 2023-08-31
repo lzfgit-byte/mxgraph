@@ -3,8 +3,8 @@ import { onUnmounted, ref, watchEffect } from 'vue';
 import { nanoid } from 'nanoid';
 import { debounce } from 'lodash';
 import mx from './useGraphFactory';
-import type { PowerGraphProps } from '@/components/mxGraph/src/type/graphTyped';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
+import type { PowerGraphProps } from '@/type/graphTyped';
+import type MyGraph from '@/hook/useGraphGraph';
 import { bus } from '@/utils/bus';
 const { mxConstants, mxRubberband, mxEvent } = mx;
 export interface GraphSetState {

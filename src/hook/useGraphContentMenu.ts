@@ -1,7 +1,7 @@
 import { ElMessage } from 'element-plus';
-import type MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-import mx from '@/components/mxGraph/src/hook/useGraphFactory';
-import type { GraphSetState } from '@/components/mxGraph/src/hook/useGraphState';
+import type MyGraph from '@/hook/useGraphGraph';
+import mx from '@/hook/useGraphFactory';
+import type { GraphSetState } from '@/hook/useGraphState';
 const { mxConstants } = mx;
 
 export default (graph: MyGraph, state: GraphSetState) => {
