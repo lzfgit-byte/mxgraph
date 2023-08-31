@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "@antfu",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "vue/component-tags-order": "off",
+    "vue/padding-line-between-blocks": "off",
+    "semi": [
+      2,
+      "always"
+    ],
+    "@typescript-eslint/semi": "off",
+    "unused-imports/no-unused-imports":"off",
+    "no-console":"off",
+    "prefer-promise-reject-errors":"off",
+    "prefer-const": "off"
+  }
+}

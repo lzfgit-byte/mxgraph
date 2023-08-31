@@ -1,0 +1,27 @@
+{
+  "name": "test-table",
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.1.1",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.3",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.36.0",
+    "@types/node": "^18.15.11",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/compiler-sfc": "^3.0.4",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "typescript": "^4.9.3",
+    "prettier": "^2.8.5",
+    "vite": "^4.1.0",
+    "less": "^4.1.3"
+  }
+}
