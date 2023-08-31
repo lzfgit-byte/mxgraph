@@ -9,6 +9,9 @@
   "dependencies": {
     "element-plus": "^2.3.3",
     "lodash": "^4.17.21",
+    "mitt": "^3.0.0",
+    "mxgraph": "^4.2.2",
+    "nanoid": "^4.0.2",
     "vue": "^3.2.45"
   },
   "devDependencies": {
