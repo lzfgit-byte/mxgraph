@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ElMessage,ElButton } from 'element-plus';
 import { ref } from 'vue';
-import mx from '../src/hook/useGraphFactory';
+import mx from './hook/useGraphFactory';
 // @ts-expect-error
 import xmlTxt from './bpmnXml.xml?raw';
 import PowerGraph from '@/PowerGraph.vue';
