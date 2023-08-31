@@ -16,7 +16,7 @@
   <ElButton :need-permission="false" @click="handlerControl">切换简练模式</ElButton>
   <ElButton :need-permission="false" @click="methods.autoLayOut">自动布局</ElButton>
   <ElButton :need-permission="false" @click="handlerCheckBpmnXml">查看bpmnxml</ElButton>
-  <div style="width: 100%; height: 95%">
+  <div style="width: 100%; height: 92vh">
     <PowerGraph ref="gRef" v-bind="props"></PowerGraph>
   </div>
   <el-dialog v-model="dialogVisible" title="xml" width="80%">
