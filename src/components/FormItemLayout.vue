@@ -10,7 +10,7 @@
   </FormItemLineLayout>
 </template>
 <script setup lang="ts">
-  import FormItemLineLayout from '@/components/mxGraph/src/components/FormItemLineLayout.vue';
+  import FormItemLineLayout from '@/components/FormItemLineLayout.vue';
 </script>
 
 <style scoped lang="less">

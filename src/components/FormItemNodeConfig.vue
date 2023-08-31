@@ -12,8 +12,8 @@
   import { ElForm, ElFormItem, ElInput, ElSwitch } from 'element-plus';
   import { ref, watchEffect } from 'vue';
   import { mxCell } from 'mxgraph';
-  import MyGraph from '@/components/mxGraph/src/hook/useGraphGraph';
-  import mx from '@/components/mxGraph/src/hook/useGraphFactory';
+  import MyGraph from '@/hook/useGraphGraph';
+  import mx from '@/hook/useGraphFactory';
   const props = defineProps({ cell: mxCell, graph: MyGraph });
   const { mxConstants, mxEventObject, mxEvent } = mx;
   const tooltip = ref('');

@@ -27,16 +27,16 @@
 <script setup lang="ts">
   import type { PropType } from 'vue';
   import { computed, provide } from 'vue';
-  import Siderbar from '@/components/mxGraph/src/components/Siderbar.vue';
-  import FormItemPanel from '@/components/mxGraph/src/components/FormItemPanel.vue';
-  import useGraphInit from '@/components/mxGraph/src/hook/useGraphInit';
-  import useGraphSetting from '@/components/mxGraph/src/hook/useGraphSetting';
-  import useGraphExpose from '@/components/mxGraph/src/hook/useGraphExpose';
-  import { graphEmitsArr } from '@/components/mxGraph/src/const/emits';
-  import SimpleSideBar from '@/components/mxGraph/src/components/SimpleSideBar.vue';
-  import type { PanelsType } from '@/components/mxGraph/src/type/graphTyped';
-  import useGraphCustomEvent from '@/components/mxGraph/src/hook/useGraphCustomEvent';
-  import useGraphShortcutKey from '@/components/mxGraph/src/hook/useGraphShortcutKey';
+  import Siderbar from '@/components/Siderbar.vue';
+  import FormItemPanel from '@/components/FormItemPanel.vue';
+  import useGraphInit from '@/hook/useGraphInit';
+  import useGraphSetting from '@/hook/useGraphSetting';
+  import useGraphExpose from '@/hook/useGraphExpose';
+  import { graphEmitsArr } from '@/const/emits';
+  import SimpleSideBar from '@/components/SimpleSideBar.vue';
+  import type { PanelsType } from '@/type/graphTyped';
+  import useGraphCustomEvent from '@/hook/useGraphCustomEvent';
+  import useGraphShortcutKey from '@/hook/useGraphShortcutKey';
   const props = defineProps({
     isReadonly: Boolean,
     isSimpleModel: Boolean,

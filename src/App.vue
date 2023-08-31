@@ -1,21 +1,21 @@
 <template>
-  <PowerBtn :need-permission="false" @click="getXml">获取xml</PowerBtn>
-  <PowerBtn :need-permission="false" @click="setXml">设置xml</PowerBtn>
-  <PowerBtn :need-permission="false" title="需要流程图里有图" @click="testSetFromJson">
+  <ElButton :need-permission="false" @click="getXml">获取xml</ElButton>
+  <ElButton :need-permission="false" @click="setXml">设置xml</ElButton>
+  <ElButton :need-permission="false" title="需要流程图里有图" @click="testSetFromJson">
     从json加载
-  </PowerBtn>
-  <PowerBtn :need-permission="false" @click="dialogVisible = true">解析bpmnXml</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.zoomIn">放大</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.zoomOut">缩小</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.zoomActual">正常</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.setReadOnly(true)">设置禁用</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.setReadOnly(false)">设置可用</PowerBtn>
-  <PowerBtn :need-permission="false" @click="handlerSetCellColor">设置颜色为#cccccc</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.tempSave">临时保存</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.loadTempSave">加载临时保存</PowerBtn>
-  <PowerBtn :need-permission="false" @click="handlerControl">切换简练模式</PowerBtn>
-  <PowerBtn :need-permission="false" @click="methods.autoLayOut">自动布局</PowerBtn>
-  <PowerBtn :need-permission="false" @click="handlerCheckBpmnXml">查看bpmnxml</PowerBtn>
+  </ElButton>
+  <ElButton :need-permission="false" @click="dialogVisible = true">解析bpmnXml</ElButton>
+  <ElButton :need-permission="false" @click="methods.zoomIn">放大</ElButton>
+  <ElButton :need-permission="false" @click="methods.zoomOut">缩小</ElButton>
+  <ElButton :need-permission="false" @click="methods.zoomActual">正常</ElButton>
+  <ElButton :need-permission="false" @click="methods.setReadOnly(true)">设置禁用</ElButton>
+  <ElButton :need-permission="false" @click="methods.setReadOnly(false)">设置可用</ElButton>
+  <ElButton :need-permission="false" @click="handlerSetCellColor">设置颜色为#cccccc</ElButton>
+  <ElButton :need-permission="false" @click="methods.tempSave">临时保存</ElButton>
+  <ElButton :need-permission="false" @click="methods.loadTempSave">加载临时保存</ElButton>
+  <ElButton :need-permission="false" @click="handlerControl">切换简练模式</ElButton>
+  <ElButton :need-permission="false" @click="methods.autoLayOut">自动布局</ElButton>
+  <ElButton :need-permission="false" @click="handlerCheckBpmnXml">查看bpmnxml</ElButton>
   <div style="width: 100%; height: 95%">
     <PowerGraph ref="gRef" v-bind="props"></PowerGraph>
   </div>
@@ -30,21 +30,19 @@
   </el-dialog>
 </template>
 <script setup lang="ts">
-import { ElMessage } from 'element-plus';
-import { nextTick, ref } from 'vue';
+import { ElMessage,ElButton } from 'element-plus';
+import { ref } from 'vue';
 import mx from '../src/hook/useGraphFactory';
 // @ts-expect-error
 import xmlTxt from './bpmnXml.xml?raw';
-import PowerGraph from '@/components/mxGraph/src/PowerGraph.vue';
-import usePowerGraph from '@/components/mxGraph/src/hook/usePowerGraph';
-import PowerBtn from '@/components/buttonGroup/btnGroupSubComp/PowerBtn.vue';
+import PowerGraph from '@/PowerGraph.vue';
+import usePowerGraph from '@/hook/usePowerGraph';
 import {
-  bpmnXmlToJson,
   setGraphFromJson,
   transform2Json,
-} from '@/components/mxGraph/src/utils/Transform';
-import { showConfirm } from '@/utils';
-const { mxConstants, mxHierarchicalLayout } = mx;
+} from '@/utils/Transform';
+import { showConfirm } from '@/utils/kitUtil';
+const { mxConstants} = mx;
 let xml =
   '<mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="kXvipDgzVxv_EnZ8P-GoQ" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="120" y="120" width="120" height="60" as="geometry"/><Object tooltip="asdasd" as="businessData"/></mxCell></root></mxGraphModel>';
 const isSimpleModel = ref(false);

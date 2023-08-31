@@ -21,8 +21,8 @@
   import { ElForm, ElFormItem, ElInput, ElInputNumber } from 'element-plus';
   import type { PropType } from 'vue';
   import { ref } from 'vue';
-  import type { edgeModelType } from '@/components/mxGraph/src/hook/useGraphFont';
-  import FormDefaultColor from '@/components/mxGraph/src/components/FormDefaultColor.vue';
+  import type { edgeModelType } from '@/hook/useGraphFont';
+  import FormDefaultColor from '@/components/FormDefaultColor.vue';
   const props = defineProps({
     edgeModel: Object as PropType<edgeModelType>,
     handlerStrokeColor: Function,

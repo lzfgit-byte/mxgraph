@@ -1,4 +1,5 @@
 import { forIn } from 'lodash';
+import {ElMessageBox} from "element-plus";
 
 export const buildStyleStr = (style: Record<string, any>) => {
   let strStyle = '';
@@ -138,4 +139,11 @@ export const Base64 = {
 
     return string;
   },
+};
+export const showConfirm = (content = null) => {
+  return ElMessageBox.confirm(content || '确认要删除该数据吗？', '警告', {
+    confirmButtonText: '确定',
+    cancelButtonText: '取消',
+    type: 'warning',
+  });
 };
