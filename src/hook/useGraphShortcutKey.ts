@@ -46,6 +46,11 @@ export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
     },
   });
   watchEffect(() => {
+    if (graphGetMouse.value) {
+      if (ctrl.value && s.value) {
+        expose.tempSave();
+      }
+    }
     if (graphGetMouse.value && !isEditing.value) {
       if (ctrl.value && a.value) {
         graph.value.selectAll(graph.value.getDefaultParent());
@@ -74,9 +79,6 @@ export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
       if (ctrl.value && d.value) {
         const cells = graph.value.getSelectionCells();
         graph.value.deleteCells(cells);
-      }
-      if (ctrl.value && s.value) {
-        expose.tempSave();
       }
       if (ctrl.value && l.value) {
         expose.loadTempSave();
