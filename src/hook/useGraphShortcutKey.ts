@@ -1,10 +1,12 @@
 import { useMagicKeys } from '@vueuse/core';
 import type { Ref } from 'vue';
 import { onMounted, ref, watchEffect } from 'vue';
+import type { mxEventObject } from 'mxgraph';
 import mx from './useGraphFactory';
 import type { MyGraph } from '@/hook/useGraphGraph';
 import type { PowerGraphExpose } from '@/type/graphTyped';
-const { mxClipboard } = mx;
+import bus from '@/utils/bus';
+const { mxClipboard, mxConstants, mxEvent } = mx;
 export interface GraphShortsMapType {
   name: string;
   key: string;
@@ -13,6 +15,7 @@ export const graphShortsMap: Ref<GraphShortsMapType[]> = ref([]);
 export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
   const el = ref<HTMLDivElement>();
   const graphGetMouse = ref(false);
+  const isEditing = ref(false);
   const addShortMap = (item: GraphShortsMapType) => {
     if (graphShortsMap.value.some((i) => i.key === item.key)) {
       return;
@@ -35,14 +38,15 @@ export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
       if (
         ctrl.value &&
         (a.value || d.value || s.value || l.value || q.value) &&
-        graphGetMouse.value
+        graphGetMouse.value &&
+        !isEditing.value
       ) {
         e.preventDefault();
       }
     },
   });
   watchEffect(() => {
-    if (graphGetMouse.value) {
+    if (graphGetMouse.value && !isEditing.value) {
       if (ctrl.value && a.value) {
         graph.value.selectAll(graph.value.getDefaultParent());
       }
@@ -102,5 +106,20 @@ export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
       }
     };
   });
+
+  const createdListener = () => {
+    const listener = (sender, args: mxEventObject) => {
+      if (args.name === mxEvent.EDITING_STARTED) {
+        isEditing.value = true;
+      }
+      if (args.name === mxEvent.EDITING_STOPPED) {
+        isEditing.value = false;
+      }
+    };
+    graph.value.addListener(mxEvent.EDITING_STARTED, listener);
+    graph.value.addListener(mxEvent.EDITING_STOPPED, listener);
+  };
+  bus.off(mxConstants.CUSTOM_GRAPH_CREATED, createdListener);
+  bus.on(mxConstants.CUSTOM_GRAPH_CREATED, createdListener);
   return { el };
 };
