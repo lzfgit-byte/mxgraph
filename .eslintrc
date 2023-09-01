@@ -14,6 +14,7 @@
     "unused-imports/no-unused-imports":"off",
     "no-console":"off",
     "prefer-promise-reject-errors":"off",
+    "@typescript-eslint/ban-ts-comment":"off",
     "prefer-const": "off"
   }
 }
