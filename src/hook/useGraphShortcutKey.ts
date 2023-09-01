@@ -6,13 +6,14 @@ import mx from './useGraphFactory';
 import type { MyGraph } from '@/hook/useGraphGraph';
 import type { PowerGraphExpose } from '@/type/graphTyped';
 import bus from '@/utils/bus';
+import type { GraphSetState } from '@/hook/useGraphState';
 const { mxClipboard, mxConstants, mxEvent } = mx;
 export interface GraphShortsMapType {
   name: string;
   key: string;
 }
 export const graphShortsMap: Ref<GraphShortsMapType[]> = ref([]);
-export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
+export default (graph: Ref<MyGraph>, expose: PowerGraphExpose, state: GraphSetState) => {
   const el = ref<HTMLDivElement>();
   const graphGetMouse = ref(false);
   const isEditing = ref(false);
@@ -46,12 +47,12 @@ export default (graph: Ref<MyGraph>, expose: PowerGraphExpose) => {
     },
   });
   watchEffect(() => {
-    if (graphGetMouse.value) {
+    if (graphGetMouse.value && !state.isReadonly.value) {
       if (ctrl.value && s.value) {
         expose.tempSave();
       }
     }
-    if (graphGetMouse.value && !isEditing.value) {
+    if (graphGetMouse.value && !isEditing.value && !state.isReadonly.value) {
       if (ctrl.value && a.value) {
         graph.value.selectAll(graph.value.getDefaultParent());
       }

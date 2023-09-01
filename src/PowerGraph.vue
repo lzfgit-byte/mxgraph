@@ -51,7 +51,7 @@
   const { graph, editor, state } = useGraphSetting(props as any, emits as any);
   const isSimpleM = computed(() => state.isSimpleM.value);
   const expose_ = useGraphExpose(graph, editor, props, state);
-  const { el } = useGraphShortcutKey(graph, expose_);
+  const { el } = useGraphShortcutKey(graph, expose_, state);
   provide('setXml', expose_.setXml);
   useGraphCustomEvent(graph, editor, props, state, expose_);
   defineExpose(expose_);

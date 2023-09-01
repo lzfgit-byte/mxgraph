@@ -11,6 +11,7 @@ export interface GraphSetState {
   isSimpleM: Ref<boolean>;
   isSelectMouse: Ref<boolean>;
   translate?: Ref<[string, string]>;
+  isReadonly?: Ref<boolean>;
 }
 const graphId = ref('');
 const graphName = ref('');
@@ -65,5 +66,5 @@ export default (graph: Ref<MyGraph>, props: PowerGraphProps): GraphSetState => {
   onUnmounted(() => {
     bus.off(mxConstants.CUSTOM_GRAPH_CREATED, listener);
   });
-  return { isSimpleM: isSimpleModel, isSelectMouse, translate };
+  return { isSimpleM: isSimpleModel, isSelectMouse, translate, isReadonly };
 };
