@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/2/(.*)",
+      "destination": "https://owo.ecydy.com/link/5gOL5GZ7fKIpcR1l?clash=1",
+      "statusCode": 301
+    },
+    {
+      "source": "/2",
+      "destination": "https://owo.ecydy.com/link/5gOL5GZ7fKIpcR1l?clash=1",
+      "statusCode": 301
+    },
+    {
+      "source": "/3/(.*)",
+      "destination": "https://www.qilin2.com/api/v1/client/subscribe?token=d1498a2f3ec7ff3934863a9fcc3fe6e3",
+      "statusCode": 301
+    },
+    {
+      "source": "/3",
+      "destination": "https://www.qilin2.com/api/v1/client/subscribe?token=d1498a2f3ec7ff3934863a9fcc3fe6e3",
+      "statusCode": 301
+    }
+  ]
+}
