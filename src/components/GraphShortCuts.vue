@@ -5,11 +5,7 @@
   </div>
 </template>
 <script setup lang="ts">
-  import { watchEffect } from 'vue';
   import { graphShortsMap } from '@/hook/useGraphShortcutKey';
-  watchEffect(() => {
-    console.log(graphShortsMap.value);
-  });
 </script>
 
 <style scoped lang="less">

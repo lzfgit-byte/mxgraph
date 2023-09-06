@@ -2,6 +2,8 @@
 import multiDemoXml from '../xml/multiDemoXml.xml?raw';
 // @ts-expect-error
 import gridXml from '../xml/gridXml.xml?raw';
+// @ts-expect-error
+import timeLine from '../xml/timeLine.xml?raw';
 export const graphTemplate = [
   {
     name: '简单模板',
@@ -14,5 +16,9 @@ export const graphTemplate = [
   {
     name: '线条模板',
     xml: gridXml,
+  },
+  {
+    name: '时间轴',
+    xml: timeLine,
   },
 ];
