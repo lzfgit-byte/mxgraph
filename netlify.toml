@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/2"
+  to = "https://owo.ecydy.com/link/5gOL5GZ7fKIpcR1l?clash=1"
+  status = 301
+  force = false
+[[redirects]]
+  from = "/3"
+  to = "https://www.qilin2.com/api/v1/client/subscribe?token=d1498a2f3ec7ff3934863a9fcc3fe6e3"
+  status = 301
+  force = false
