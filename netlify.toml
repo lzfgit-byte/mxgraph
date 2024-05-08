@@ -5,6 +5,6 @@
   force = false
 [[redirects]]
   from = "/3"
-  to = "https://abc199.com/api/v1/client/subscribe?token=d1498a2f3ec7ff3934863a9fcc3fe6e3"
+  to = "http://119.36.225.22:55/api/v1/client/subscribe?token=d1498a2f3ec7ff3934863a9fcc3fe6e3"
   status = 301
   force = false
