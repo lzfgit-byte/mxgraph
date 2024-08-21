@@ -8,3 +8,8 @@
   to = "https://my31c.tdwj.net:108/api/v1/client/subscribe?token=d1498a2f3ec7ff3934863a9fcc3fe6e3"
   status = 301
   force = false
+[[redirects]]
+  from = "/111"
+  to = "https://baiducn.top/link/vljf3ku74wSAlEMT?clash=1"
+  status = 301
+  force = false
